@@ -1,0 +1,196 @@
+@charset "utf-8";
+/* CSS Document */
+*{ scroll-behavior: smooth}
+
+section { 
+	min-height: 90vh;
+	padding-top: 150px
+}
+.design-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1f1f1f;
+  min-height: 100vh;
+  padding: 100px 0;
+  font-family: Jost;
+}
+
+.design {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#skill .progress {
+    height: 5px;
+    border-radius: 5px;
+}
+
+#skill .progress .progress-bar {
+	background-color: #FFC836 !important;
+    width: 0px;
+    border-radius: 5px;
+    transition: 3s;
+}
+
+#skill .nav-pills .nav-link {
+    color: var(--dark);
+}
+
+#skill .nav-pills .nav-link.active {
+    color: #FFC836;
+}
+
+#skill .tab-content hr {
+    width: 30px;
+}
+
+
+@media screen and (min-width: 768px) {
+  .timeline {
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+  }
+	
+  .timeline-middle {
+    position: relative;
+    background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+    width: 3px;
+    height: 100%;
+  }
+  .main-middle {
+    opacity: 0;
+  }
+  .timeline-circle {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #F27121, #E94057, #8A2387);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+/* Media query to help keep the Job Titles from overflowing */
+
+@media only screen and (max-width: 750px) {
+
+  .date-details h3 {
+    font-size: 1.35rem;
+  }
+
+}
+
+@media (max-width: 767px) {
+    ul.timeline:before {
+        left: 40px;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        width: calc(100% - 90px);
+        width: -moz-calc(100% - 90px);
+        width: -webkit-calc(100% - 90px);
+    }
+
+    ul.timeline > li > .timeline-badge {
+        left: 15px;
+        margin-left: 0;
+        top: 16px;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        float: right;
+    }
+
+        ul.timeline > li > .timeline-panel:before {
+            border-left-width: 0;
+            border-right-width: 15px;
+            left: -15px;
+            right: auto;
+        }
+
+        ul.timeline > li > .timeline-panel:after {
+            border-left-width: 0;
+            border-right-width: 14px;
+            left: -14px;
+            right: auto;
+        }
+}
+
+
+.progress, .progress-bar{height:15px;}
+.progress-bar {
+    transition: width 2s ease; /* Tạo hiệu ứng chuyển động mượt mà */
+}
+
+/* Khi tab không được chọn */
+.nav-pills .nav-link:not(.active) {
+    background-color: black !important; /* Nền đen khi tab không được chọn */
+    color: #FFC836 !important; /* Chữ vàng */
+}
+
+/* Khi hover trên tab */
+.nav-pills .nav-link:hover {
+    background-color: #ffffff !important; /* Nền trắng khi hover */
+    color: black !important; /* Chữ đen khi hover */
+}
+
+/* Khi tab được chọn (active) */
+.nav-pills .nav-link.active {
+    background-color: #FFC836 !important; /* Nền vàng khi tab được chọn */
+    color: black !important; /* Chữ đen khi tab được chọn */
+}
+#tes .avatar
+{
+	width: 100px; 
+	height: 100px;
+	border-radius: 50%;
+	border: 4px solid pink;
+	display: block; margin: auto; 
+	margin-bottom: 50px
+}
+
+.hero h1, .hero h2 {
+  text-align: left;}
+
+.popup-message {
+  display: none;
+  position: absolute;  /* Đặt vị trí tuyệt đối */
+  top: -60px;  /* Đặt popup cách 60px từ trên xuống */
+  left: 0;  
+  font-size: 30px;
+  font-weight: bold;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7); 
+  color: #FFC836;  
+  border-radius: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  margin-left: 0; 
+}
+
+
+.popup-message.show {
+	text: Roboto;
+	text-color: #FFC836;
+  display: block;
+  opacity: 2;
+  animation: fadeInLeft ;
+}
+
+.text-center img {
+  display: block;
+  margin: 0 auto;
+}	
+
+img {
+  width: 100%;          
+  height: auto;         
+  object-fit: contain; 
+}
